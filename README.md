@@ -1,6 +1,6 @@
 # vulpes-conventions
 
-A Claude Code plugin with the architecture and code conventions of vulpes-facility, for software projects in any stack.\
+A Claude Code plugin with general architecture and code conventions for software projects in any stack.\
 Its skill, `project-conventions`, tells Claude how to set up a repository and how to add a service, an API, a migration, a screen, or a deployment.
 
 ## Install
@@ -29,7 +29,7 @@ Claude reads a reference file only when the task needs it.
 | `kubernetes.md` | Deployments, probes, and Jobs |
 | `servers.md` | Bare metal and virtual machines |
 | `cloud.md` | AWS and OCI |
-| `git.md` | Branch strategies, Conventional Commits, and release-please |
+| `git.md` | Branch strategies, Conventional Commits, signed commits, and release-please |
 
 The reference files are in [`plugins/vulpes-conventions/skills/project-conventions/references`](plugins/vulpes-conventions/skills/project-conventions/references).
 
