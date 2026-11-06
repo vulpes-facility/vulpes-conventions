@@ -73,6 +73,13 @@ Write each commit message in the Conventional Commits 1.0.0 form:
   With squash merge, CI checks the pull request title.\
   With merge commits, CI checks each commit in the pull request.
 
+## Signed commits
+
+1. When the host requires signed commits for the repository, sign each commit.\
+   For example, a GitHub ruleset or branch protection rule with "Require signed commits", or a GitLab push rule "Reject unsigned commits".
+2. Sign with a GPG, SSH, or S/MIME key, and add its public key to your account on the host.\
+   Without the public key, the host cannot verify the signature, and it can refuse the push.
+
 ## Versions and tags
 
 1. Give each released app and package a Semantic Versioning number.\
