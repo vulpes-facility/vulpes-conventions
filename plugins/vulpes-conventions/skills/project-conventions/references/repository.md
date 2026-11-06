@@ -10,6 +10,8 @@
    Keep shared TypeScript presets in `packages/typescript-config`.
 5. Keep infrastructure code in `infra/`: compose files, Kubernetes manifests, and Terraform or OpenTofu code.
 6. Write a `README.md` with the start steps, the folder layout, the generator commands, and the branch strategy ([git.md](git.md)).
+7. Copy [agent-instructions.md](agent-instructions.md) to `docs/conventions/agent-instructions.md`.\
+   Then write `AGENTS.md` and `CLAUDE.md` by its rules.
 
 - In `turbo.json`, write the variables that change the build output in `env`, because they are part of the cache key.
 - Write the variables that only `dev` reads in `passThroughEnv`.

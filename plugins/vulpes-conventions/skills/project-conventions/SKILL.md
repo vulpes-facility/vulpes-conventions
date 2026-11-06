@@ -1,6 +1,6 @@
 ---
 name: project-conventions
-description: Architecture and code conventions for software projects in any stack. The code stacks include Go, Java or Kotlin with Spring Boot, TypeScript with NestJS, React, Vue, and Flutter. They also include Swift for iOS, Kotlin for Android, OpenAPI, and gRPC. The components include PostgreSQL, MongoDB, Redis or Valkey, RabbitMQ, Kafka, S3-compatible storage, OpenTelemetry, and Fastlane. Use it when you set up a repository or add an app, a service, or a component. Use it when you add a module, a screen, an API, a message, a migration, or an environment variable. Use it when you write a Dockerfile, a compose file, or Kubernetes manifests. Use it when you set up a server, or cloud resources on AWS or OCI. Use it when you make a branch, a commit, a pull request, or a release.
+description: Architecture and code conventions for software projects in any stack. The code stacks include Go, Java or Kotlin with Spring Boot, TypeScript with NestJS, React, Vue, and Flutter. They also include Swift for iOS, Kotlin for Android, OpenAPI, and gRPC. The components include PostgreSQL, MongoDB, Redis or Valkey, RabbitMQ, Kafka, S3-compatible storage, OpenTelemetry, and Fastlane. Use it when you set up a repository or add an app, a service, or a component. Use it when you write AGENTS.md, CLAUDE.md, or a project convention. Use it when you add a module, a screen, an API, a message, a migration, or an environment variable. Use it when you write a Dockerfile, a compose file, or Kubernetes manifests. Use it when you set up a server, or cloud resources on AWS or OCI. Use it when you make a branch, a commit, a pull request, or a release.
 ---
 
 # Project conventions
@@ -10,7 +10,9 @@ MUST, MUST NOT, SHOULD, SHOULD NOT, and MAY are BCP 14 keywords (RFC 2119, RFC 8
 
 ## 1. Use of this file
 
-1. Read the `AGENTS.md`, `CLAUDE.md`, and `README.md` of the project first.\
+1. Read the `AGENTS.md` and `README.md` of the project first.\
+   Then read each file in `docs/conventions/` that the index of `AGENTS.md` lists for the task.\
+   When the project has no `AGENTS.md`, read its `CLAUDE.md`.\
    A project rule MUST have priority over a rule in this file and in its reference files.
 2. Find the stack of each app in section 4.\
    Find each component in section 5.
@@ -56,7 +58,8 @@ Read only the files that the task needs.
 
 | Task | Read first |
 | --- | --- |
-| Set up a repository | [`references/repository.md`](references/repository.md), [`references/git.md`](references/git.md) |
+| Set up a repository | [`references/repository.md`](references/repository.md), [`references/agent-instructions.md`](references/agent-instructions.md), [`references/git.md`](references/git.md) |
+| Write `AGENTS.md`, `CLAUDE.md`, or a project convention | [`references/agent-instructions.md`](references/agent-instructions.md) |
 | Add an app | [`references/repository.md`](references/repository.md) |
 | Add a service, a module, or a use case | [`references/server-architecture.md`](references/server-architecture.md), [`references/api-contract.md`](references/api-contract.md) |
 | Add or change an HTTP or gRPC API | [`references/api-contract.md`](references/api-contract.md) |
