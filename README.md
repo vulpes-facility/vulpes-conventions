@@ -18,6 +18,7 @@ Claude reads a reference file only when the task needs it.
 | File | Rules for |
 | --- | --- |
 | `repository.md` | The monorepo layout and its root tasks |
+| `agent-instructions.md` | `CLAUDE.md`, `AGENTS.md`, the project conventions in `docs/conventions/`, and the index format |
 | `server-architecture.md` | Business modules and their four layers |
 | `api-contract.md` | HTTP and gRPC contracts, compatibility checks, and error codes |
 | `data-stores.md` | PostgreSQL, MongoDB, Redis or Valkey, and object storage |
@@ -39,9 +40,7 @@ The reference files are in [`plugins/vulpes-conventions/skills/project-conventio
 2. Try the plugin with `claude --plugin-dir plugins/vulpes-conventions`.
 3. Run `claude plugin validate plugins/vulpes-conventions` before a pull request.
 
-- Write each commit message and each pull request title as a Conventional Commit.
-- Merge pull requests with a squash merge.
-- Write the skill in ASD-STE100 (Simplified Technical English), with BCP 14 keywords and Semantic Line Breaks.
+Follow the conventions in [`docs/conventions/`](docs/conventions/).
 
 ## License
 
