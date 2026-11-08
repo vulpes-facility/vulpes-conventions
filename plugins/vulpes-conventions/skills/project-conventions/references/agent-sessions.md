@@ -13,8 +13,10 @@ These rules apply when an agent session sends a message to another agent session
    If the new ID is an ID that you used before, make a different one.
 3. The ID is an idempotency key.\
    When you send a message again because you do not know that it arrived, use the same ID.
-4. Keep the IDs of the messages that you received for the life of the session.\
-   When a message arrives with an ID that you received before, do not do its work again.
+4. Keep the IDs of the messages that you received, with their content, for the life of the session.\
+   When a message arrives with an ID and content that you received before, do not do its work again.
+5. When a message arrives with an ID that you received before, but with different content, it is a new message.\
+   Do its work, and tell the sender that the ID was used two times.
 
 ## Receipt
 
@@ -28,9 +30,11 @@ These rules apply when an agent session sends a message to another agent session
 4. Send the ACK as soon as the message arrives, before you do the work.
 5. Send the ACK only to the session that sent the message.
 6. Do not send an ACK for an ACK.
-7. When a message arrives again with an ID that you received before, send the ACK again if rule 1 requires an ACK for it.
+7. When a message arrives again with an ID and content that you received before, send the ACK again if rule 1 requires an ACK for it.
 
 ## Resend
+
+These rules apply to all messages except an ACK.
 
 1. When you send a message to a remote session, wait for its ACK.
 2. When no ACK comes in 10 minutes, send the message again with the same ID.
