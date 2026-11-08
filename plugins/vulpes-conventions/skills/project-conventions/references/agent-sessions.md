@@ -10,12 +10,14 @@ These rules apply when an agent session sends a message to another agent session
    `<id>` is 6 random hexadecimal digits, for example from `openssl rand -hex 3`.\
    Example: `[infra-3f9a1c]`.
 2. Make a new ID for each new message.\
-   If the new ID is an ID that you used before, make a different one.
+   If the new ID is an ID that you used before in this session, make a different one.\
+   Do not limit this rule to a time, because a message can arrive late.
 3. The ID is an idempotency key.\
    When you send a message again because you do not know that it arrived, use the same ID.
-4. Keep the IDs of the messages that you received, with their content, for the life of the session.\
-   When a message arrives with an ID and content that you received before, do not do its work again.
-5. When a message arrives with an ID that you received before, but with different content, it is a new message.\
+4. Keep the ID and the content of each message that you received for 3 hours.\
+   3 hours is longer than a resend takes (see Resend).\
+   When a message arrives with an ID and content that you received in the last 3 hours, do not do its work again.
+5. When a message arrives with an ID that you received in the last 3 hours, but with different content, it is a new message.\
    Do its work, and tell the sender that the ID was used two times.
 
 ## Receipt
@@ -30,7 +32,7 @@ These rules apply when an agent session sends a message to another agent session
 4. Send the ACK as soon as the message arrives, before you do the work.
 5. Send the ACK only to the session that sent the message.
 6. Do not send an ACK for an ACK.
-7. When a message arrives again with an ID and content that you received before, send the ACK again if rule 1 requires an ACK for it.
+7. When a message arrives again with an ID and content that you received in the last 3 hours, send the ACK again if rule 1 requires an ACK for it.
 
 ## Resend
 
