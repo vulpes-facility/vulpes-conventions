@@ -10,7 +10,8 @@ These rules apply when an agent session sends a message to another agent session
    `<id>` is 6 random hexadecimal digits, for example from `openssl rand -hex 3`.\
    Example: `[infra-3f9a1c]`.
 2. Make a new ID for each new message.\
-   If the new ID is an ID that you used in the last 3 hours, make a different one.
+   If the new ID is an ID that you used before in this session, make a different one.\
+   Do not limit this rule to a time, because a message can arrive late.
 3. The ID is an idempotency key.\
    When you send a message again because you do not know that it arrived, use the same ID.
 4. Keep the ID and the content of each message that you received for 3 hours.\
