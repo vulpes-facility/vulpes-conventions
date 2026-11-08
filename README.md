@@ -19,6 +19,7 @@ Claude reads a reference file only when the task needs it.
 | --- | --- |
 | `repository.md` | The monorepo layout and its root tasks |
 | `agent-instructions.md` | `CLAUDE.md`, `AGENTS.md`, the project conventions in `docs/conventions/`, and the index format |
+| `agent-sessions.md` | Messages between agent sessions: the message ID, the receipt of a remote session, and resends |
 | `server-architecture.md` | Business modules and their four layers |
 | `api-contract.md` | HTTP and gRPC contracts, compatibility checks, and error codes |
 | `data-stores.md` | PostgreSQL, MongoDB, Redis or Valkey, and object storage |

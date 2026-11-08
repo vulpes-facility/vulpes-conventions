@@ -60,6 +60,7 @@ Read only the files that the task needs.
 | --- | --- |
 | Set up a repository | [`references/repository.md`](references/repository.md), [`references/agent-instructions.md`](references/agent-instructions.md), [`references/git.md`](references/git.md) |
 | Write `AGENTS.md`, `CLAUDE.md`, or a project convention | [`references/agent-instructions.md`](references/agent-instructions.md) |
+| Send a message to another agent session, or receive one | [`references/agent-sessions.md`](references/agent-sessions.md) |
 | Add an app | [`references/repository.md`](references/repository.md) |
 | Add a service, a module, or a use case | [`references/server-architecture.md`](references/server-architecture.md), [`references/api-contract.md`](references/api-contract.md) |
 | Add or change an HTTP or gRPC API | [`references/api-contract.md`](references/api-contract.md) |
