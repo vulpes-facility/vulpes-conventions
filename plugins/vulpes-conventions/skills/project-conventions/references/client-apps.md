@@ -41,3 +41,18 @@
 - In tests, find elements by role, by label, or by a test key.\
   Do not find them by class or by position.
 - Each new user flow MUST get an end-to-end test step.
+
+## Desktop apps
+
+Electron and Tauri apps build the UI with the web stack.\
+They follow the Web column and the rules above.\
+An egui app builds the UI in Rust, and follows the rules above.
+
+1. In Electron, keep the main process, the preload scripts, and the renderer in separate folders.\
+   Do not turn off context isolation or the sandbox, and do not turn on Node.js integration in a renderer.\
+   Give the renderer only the functions that a preload script exposes with `contextBridge`.
+2. In Tauri, allow only the commands and the plugin permissions that each window needs, in the capability files.
+3. Parse each message between the processes, as a value that comes into the app (rule 1).
+4. In egui, keep AccessKit on, and give each widget a label.\
+   The screen reader support of egui is not complete, for example with Orca on Linux.\
+   Do the screen reader tests of the `design-conventions` skill on each target platform ([`accessibility.md`](../../design-conventions/references/accessibility.md)).

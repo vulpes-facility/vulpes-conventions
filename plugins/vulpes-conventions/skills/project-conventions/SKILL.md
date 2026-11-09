@@ -1,6 +1,6 @@
 ---
 name: project-conventions
-description: Architecture and code conventions for software projects in any stack. The code stacks include Go, Java or Kotlin with Spring Boot, TypeScript with NestJS, React, Vue, and Flutter. They also include Swift for iOS, Kotlin for Android, OpenAPI, and gRPC. The components include PostgreSQL, MongoDB, Redis or Valkey, RabbitMQ, Kafka, S3-compatible storage, OpenTelemetry, and Fastlane. Use it when you set up a repository or add an app, a service, or a component. Use it when you write AGENTS.md, CLAUDE.md, or a project convention. Use it when you add a module, a screen, an API, a message, a migration, or an environment variable. Use it when you write a Dockerfile, a compose file, or Kubernetes manifests. Use it when you set up a server, or cloud resources on AWS or OCI. Use it when you make a branch, a commit, a pull request, or a release.
+description: Architecture and code conventions for software projects in any stack. The code stacks include Go, Java or Kotlin with Spring Boot, TypeScript with NestJS, React, Vue, and Flutter. They also include Swift for iOS, Kotlin for Android, Electron, Tauri, and egui for desktop apps, OpenAPI, and gRPC. The components include PostgreSQL, MongoDB, Redis or Valkey, RabbitMQ, Kafka, S3-compatible storage, OpenTelemetry, and Fastlane. Use it when you set up a repository or add an app, a service, or a component. Use it when you write AGENTS.md, CLAUDE.md, or a project convention. Use it when you add a module, a screen, an API, a message, a migration, or an environment variable. Use it when you write a Dockerfile, a compose file, or Kubernetes manifests. Use it when you set up a server, or cloud resources on AWS or OCI. Use it when you make a branch, a commit, a pull request, or a release.
 ---
 
 # Project conventions
@@ -95,6 +95,9 @@ or [`references/servers.md`](references/servers.md) for bare metal and virtual m
 | Flutter | `flutter create` | `dart format`, `flutter analyze` | a test that reads the imports | none | `flutter test`, `integration_test` |
 | Android (Kotlin) | Android Studio template, Gradle | ktlint, Android Lint, detekt | Gradle modules, a test of the module graph | Room migrations | JUnit, Compose UI tests |
 | iOS (Swift) | Xcode template, Swift Package Manager | `swift-format`, SwiftLint | Swift Package Manager targets, a test of the package graph | SwiftData `SchemaMigrationPlan` | Swift Testing, XCTest, XCUITest |
+| Electron | `create-electron-app` (`vite-typescript`), the web stack for the renderer | Prettier, ESLint | dependency-cruiser for the main, preload, and renderer folders, steiger in the renderer | none | Vitest, Playwright (its Electron support is experimental) |
+| Tauri | `create-tauri-app`, the web stack for the front end | Prettier, ESLint, `cargo fmt`, Clippy | steiger in the front end | none | Vitest, `cargo test`, WebdriverIO with `tauri-driver` (Windows and Linux only) |
+| egui | `eframe_template`, Cargo | `cargo fmt`, Clippy | Cargo workspace crates, a test of the crate graph | none | `cargo test`, `egui_kittest` (finds widgets through AccessKit) |
 | gRPC | `buf config init` | `buf format`, `buf lint` | `buf breaking` | none | none |
 | OpenAPI | generate from code, or write first | Spectral or Redocly CLI | `oasdiff breaking` | none | none |
 
