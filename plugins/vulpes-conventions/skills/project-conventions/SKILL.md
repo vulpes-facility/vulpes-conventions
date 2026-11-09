@@ -70,6 +70,7 @@ Read only the files that the task needs.
 | Add a client app or a screen | [`references/client-apps.md`](references/client-apps.md), [`references/ui-implementation.md`](references/ui-implementation.md) |
 | Build a design in code: tokens, conditions, semantics, motion, or localization | [`references/ui-implementation.md`](references/ui-implementation.md) |
 | Release a mobile app, or set up signing | [`references/mobile-release.md`](references/mobile-release.md) |
+| Release a desktop app, or set up its signing or updates | [`references/desktop-release.md`](references/desktop-release.md) |
 | Add traces, metrics, logs, alerts, or dashboards | [`references/observability.md`](references/observability.md) |
 | Write a Dockerfile or a compose file | [`references/containers.md`](references/containers.md) |
 | Write Kubernetes manifests | [`references/kubernetes.md`](references/kubernetes.md) |
