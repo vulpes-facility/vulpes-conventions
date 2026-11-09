@@ -12,8 +12,8 @@ This table gives the official components of each design system.
 | --- | --- |
 | Apple HIG | SwiftUI, UIKit, AppKit |
 | Material 3 | Jetpack Compose Material 3, Flutter Material. On the web, Material Web is in maintenance mode |
-| Fluent 2 | WinUI 3, Fluent UI React, Fluent UI Web Components |
-| GNOME HIG | GTK 4, libadwaita |
+| Fluent 2 | Fluent UI React, Fluent UI Web Components |
+| GNOME HIG | None for the stacks of this skill |
 | IBM Carbon | `@carbon/react`, `@carbon/web-components` |
 | Adobe Spectrum | React Spectrum, Spectrum Web Components |
 | Primer | `@primer/react` |
@@ -45,7 +45,7 @@ Do not detect a device or a browser by its name or its user agent.
 | Condition | Web | Native platforms |
 | --- | --- | --- |
 | Browser features | `@supports`, and feature detection in scripts | None |
-| Window size | Media queries, and container queries for the size of a component | Size classes (Apple), window size classes (Android), breakpoints (libadwaita) |
+| Window size | Media queries, and container queries for the size of a component | Size classes (Apple), window size classes (Android) |
 | Input | `pointer` and `hover` for the primary input, `any-pointer` and `any-hover` for all inputs | The input events and the pointer effects of the platform |
 | User settings | `prefers-color-scheme`, `prefers-contrast`, `forced-colors`, `prefers-reduced-motion`, `prefers-reduced-transparency` | The accessibility settings of the platform |
 | Language | The `lang` attribute, and `Intl` | The locale API of the platform |
@@ -70,14 +70,14 @@ On the web, use the touch target size when `any-pointer: coarse` matches.
 5. Do not stop zoom in the viewport settings.
 6. Use logical properties, for example `margin-inline-start`, so that the layout mirrors for right-to-left languages.
 7. On a native platform, give each control its role, name, state, and value with the accessibility API:\
-   the accessibility modifiers in SwiftUI, semantics in Compose, UI Automation on Windows, and the accessible properties of GTK.
+   the accessibility modifiers in SwiftUI, semantics in Compose, the `Semantics` widget in Flutter, and AccessKit in egui.
 
 ## Motion
 
 1. Use the springs of the platform:\
    `.smooth`, `.snappy`, `.bouncy`, and `Spring(duration:bounce:)` in SwiftUI,\
    `spring()` and `MotionScheme` (standard, or expressive as an experimental API) in Compose,\
-   `SpringSimulation` in Flutter, `AdwSpringAnimation` in libadwaita, and the spring animations of the Windows composition API.\
+   and `SpringSimulation` in Flutter.\
    On the web, use a CSS `linear()` easing that approximates the spring.
 2. Animate transform and opacity.\
    On the web, do not animate width, height, position, or margin.\
@@ -89,18 +89,19 @@ On the web, use the touch target size when `any-pointer: coarse` matches.
 5. Use a blur (`backdrop-filter` on the web) only with an opaque fallback.
 
 This table gives the names of the APIs for the transitions in the glossary of the `design-conventions` skill.\
+Electron and Tauri apps use the Web column.\
 A dash means that the platform has no API with that name.\
 Then make the pattern with the general animation API of the platform.
 
-| Pattern | SwiftUI | Jetpack Compose | Flutter | Web | WinUI |
-| --- | --- | --- | --- | --- | --- |
-| Shared element transition | `matchedGeometryEffect`, `navigationTransition(.zoom)` with `matchedTransitionSource` | `SharedTransitionLayout` with `Modifier.sharedElement` | `Hero` | View transitions with `view-transition-name` | `ConnectedAnimationService` |
-| Container transform | `navigationTransition(.zoom)` | `SharedTransitionLayout` with `Modifier.sharedBounds` | `OpenContainer` (`animations` package) | View transitions | `ConnectedAnimationService` |
-| Shared axis | - | `AnimatedContent` | `SharedAxisTransition` (`animations` package) | View transitions | `SlideNavigationTransitionInfo` |
-| Fade through | - | `AnimatedContent` | `FadeThroughTransition` (`animations` package) | View transitions | - |
-| Fade | `.transition(.opacity)` | `AnimatedVisibility` with `fadeIn` and `fadeOut` | `FadeScaleTransition` (`animations` package) | A CSS transition of `opacity` | - |
-| Push | `NavigationStack` | Navigation Compose | `MaterialPageRoute`, `CupertinoPageRoute` | View transitions | `DrillInNavigationTransitionInfo` |
-| Scroll-driven animation | `scrollTransition`, `visualEffect` | - | - | `animation-timeline: scroll()` and `view()` | - |
+| Pattern | SwiftUI | Jetpack Compose | Flutter | Web |
+| --- | --- | --- | --- | --- |
+| Shared element transition | `matchedGeometryEffect`, `navigationTransition(.zoom)` with `matchedTransitionSource` | `SharedTransitionLayout` with `Modifier.sharedElement` | `Hero` | View transitions with `view-transition-name` |
+| Container transform | `navigationTransition(.zoom)` | `SharedTransitionLayout` with `Modifier.sharedBounds` | `OpenContainer` (`animations` package) | View transitions |
+| Shared axis | - | `AnimatedContent` | `SharedAxisTransition` (`animations` package) | View transitions |
+| Fade through | - | `AnimatedContent` | `FadeThroughTransition` (`animations` package) | View transitions |
+| Fade | `.transition(.opacity)` | `AnimatedVisibility` with `fadeIn` and `fadeOut` | `FadeScaleTransition` (`animations` package) | A CSS transition of `opacity` |
+| Push | `NavigationStack` | Navigation Compose | `MaterialPageRoute`, `CupertinoPageRoute` | View transitions |
+| Scroll-driven animation | `scrollTransition`, `visualEffect` | - | - | `animation-timeline: scroll()` and `view()` |
 
 ## Text and localization
 

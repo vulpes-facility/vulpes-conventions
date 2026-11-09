@@ -27,7 +27,7 @@ Claude reads a reference file only when the task needs it.
 | `api-contract.md` | HTTP and gRPC contracts, compatibility checks, and error codes |
 | `data-stores.md` | PostgreSQL, MongoDB, Redis or Valkey, and object storage |
 | `messaging.md` | RabbitMQ, Kafka, and the transactional outbox |
-| `client-apps.md` | Web, Flutter, Android, and iOS apps |
+| `client-apps.md` | Web, Flutter, Android, iOS, Electron, Tauri, and egui apps |
 | `ui-implementation.md` | How to build the design of `design-conventions` in code: component libraries, tokens, conditions, browsers, semantics, motion, and localization |
 | `mobile-release.md` | Fastlane lanes and signing |
 | `observability.md` | OpenTelemetry, logs, and alerts |
