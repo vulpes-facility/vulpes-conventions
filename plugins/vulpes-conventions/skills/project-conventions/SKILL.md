@@ -50,6 +50,9 @@ MUST, MUST NOT, SHOULD, SHOULD NOT, and MAY are BCP 14 keywords (RFC 2119, RFC 8
    Make branches and merges by the branch strategy of the project ([`references/git.md`](references/git.md)).
 10. Do not commit or push unless the user asks.\
     Before you report work as done, run the build, lint, type check, and tests of each changed app.
+11. Write the simplest code that meets the current requirement (KISS).\
+    Do not add an abstraction, an option, a layer, or a setting that no current requirement uses (YAGNI).
+12. Write only the tests that [`references/testing.md`](references/testing.md) asks for.
 
 ## 3. Reference files
 
@@ -71,6 +74,7 @@ Read only the files that the task needs.
 | Build a design in code: tokens, conditions, semantics, motion, or localization | [`references/ui-implementation.md`](references/ui-implementation.md) |
 | Release a mobile app, or set up signing | [`references/mobile-release.md`](references/mobile-release.md) |
 | Release a desktop app, or set up its signing or updates | [`references/desktop-release.md`](references/desktop-release.md) |
+| Write, change, or delete tests | [`references/testing.md`](references/testing.md) |
 | Add traces, metrics, logs, alerts, or dashboards | [`references/observability.md`](references/observability.md) |
 | Write a Dockerfile or a compose file | [`references/containers.md`](references/containers.md) |
 | Write Kubernetes manifests | [`references/kubernetes.md`](references/kubernetes.md) |
