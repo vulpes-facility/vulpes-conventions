@@ -1,7 +1,7 @@
 {
   "name": "vulpes-conventions",
-  "version": "1.3.1",
-  "description": "Architecture and code conventions for software projects in any stack: server layers, API contracts, data stores, messages, client apps, mobile releases, observability, containers, Kubernetes, cloud providers, and git.",
+  "version": "1.4.0",
+  "description": "Architecture, code, and design conventions for software projects in any stack: server layers, API contracts, data stores, messages, client apps, mobile releases, observability, containers, Kubernetes, cloud providers, git, and the design of web, mobile, and desktop apps.",
   "author": { "name": "vulpes33" },
   "homepage": "https://github.com/vulpes-facility/vulpes-conventions",
   "repository": "https://github.com/vulpes-facility/vulpes-conventions",

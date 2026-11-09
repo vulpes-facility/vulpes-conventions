@@ -13,7 +13,8 @@ MUST, MUST NOT, SHOULD, SHOULD NOT, and MAY are BCP 14 keywords (RFC 2119, RFC 8
 1. Read the `AGENTS.md` and `README.md` of the project first.\
    Then read each file in `docs/conventions/` that the index of `AGENTS.md` lists for the task.\
    When the project has no `AGENTS.md`, read its `CLAUDE.md`.\
-   A project rule MUST have priority over a rule in this file and in its reference files.
+   A project rule MUST have priority over a rule in this file and in its reference files.\
+   The decision of the user MUST have priority over a project rule and over the rules in this file and in its reference files.
 2. Find the stack of each app in section 4.\
    Find each component in section 5.
 3. Apply the rules in section 2 to each task.
@@ -66,7 +67,8 @@ Read only the files that the task needs.
 | Add or change an HTTP or gRPC API | [`references/api-contract.md`](references/api-contract.md) |
 | Add a data store, a query, a schema change, or a migration | [`references/data-stores.md`](references/data-stores.md), and the deploy file |
 | Add a broker, a message, a publisher, or a consumer | [`references/messaging.md`](references/messaging.md) |
-| Add a client app or a screen | [`references/client-apps.md`](references/client-apps.md) |
+| Add a client app or a screen | [`references/client-apps.md`](references/client-apps.md), [`references/ui-implementation.md`](references/ui-implementation.md) |
+| Build a design in code: tokens, conditions, semantics, motion, or localization | [`references/ui-implementation.md`](references/ui-implementation.md) |
 | Release a mobile app, or set up signing | [`references/mobile-release.md`](references/mobile-release.md) |
 | Add traces, metrics, logs, alerts, or dashboards | [`references/observability.md`](references/observability.md) |
 | Write a Dockerfile or a compose file | [`references/containers.md`](references/containers.md) |
@@ -88,7 +90,7 @@ or [`references/servers.md`](references/servers.md) for bare metal and virtual m
 | Go | `go mod init`, folders `cmd/<app>` and `internal/<module>` | `gofmt`, `go vet`, `golangci-lint` | `depguard` in `golangci-lint` | `goose`, or `migrate` (golang-migrate) | `go test`, Testcontainers |
 | Java or Kotlin, Spring Boot | Spring Initializr, Gradle | Spotless, Error Prone (Java), ktlint or detekt (Kotlin) | Spring Modulith `verify()`, ArchUnit | Flyway | JUnit (the version that Spring Boot manages), Testcontainers |
 | TypeScript, NestJS | `nest new`, `nest g` | Prettier, oxlint or ESLint | dependency-cruiser | node-pg-migrate | Vitest, supertest |
-| React | `create-vite` (`react-compiler-ts`), `fsd` CLI, `shadcn` | Prettier, ESLint | steiger | none | Vitest, Playwright |
+| React | `create-vite` (`react-compiler-ts`), `fsd` CLI, `shadcn` when the design system has no React library | Prettier, ESLint | steiger | none | Vitest, Playwright |
 | Vue | `create-vue`, `fsd` CLI | Prettier, ESLint | steiger | none | Vitest, Playwright |
 | Flutter | `flutter create` | `dart format`, `flutter analyze` | a test that reads the imports | none | `flutter test`, `integration_test` |
 | Android (Kotlin) | Android Studio template, Gradle | ktlint, Android Lint, detekt | Gradle modules, a test of the module graph | Room migrations | JUnit, Compose UI tests |
