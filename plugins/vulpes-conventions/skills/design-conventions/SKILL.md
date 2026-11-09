@@ -69,7 +69,7 @@ MUST, MUST NOT, SHOULD, SHOULD NOT, and MAY are BCP 14 keywords (RFC 2119, RFC 8
 13. Less, but better: do not add an element that helps no main task of the service.\
     When the rules do not decide a case, use [`references/principles.md`](references/principles.md), and name the principle that you use.
 14. Do not use deceptive patterns.\
-    Examples are hidden costs, options that are selected for the user, and a cancel flow harder than the sign-up.\
+    Examples are hidden costs, paid extras or consent that are selected for the user, and a cancel flow harder than the sign-up.\
     Also do not use false urgency, or text that shames the user for a refusal.
 
 ## 3. Reference files
