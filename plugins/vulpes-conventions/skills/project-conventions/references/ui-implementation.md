@@ -5,9 +5,8 @@ The design rules stay in that skill.
 
 ## Component libraries
 
-1. When the base design system has an official component library for the stack, use it ([`client-apps.md`](client-apps.md)).
-2. For a custom design system, build the components on a component library with accessible behavior, and give them the tokens of the design system.\
-   On React, use shadcn (`SKILL.md`, section 4).
+[`client-apps.md`](client-apps.md) tells when to use the official component library of the base design system.\
+This table gives the official components of each design system.
 
 | Design system | Official components |
 | --- | --- |
@@ -25,6 +24,9 @@ The design rules stay in that skill.
 | KRDS | The code on `krds.go.kr` |
 | GOV.UK Design System | `govuk-frontend` |
 | USWDS | `@uswds/uswds` |
+
+1. For a custom design system, build the components on a component library with accessible behavior, and give them the tokens of the design system.\
+   On React, use shadcn (`SKILL.md`, section 4).
 
 ## Tokens
 
