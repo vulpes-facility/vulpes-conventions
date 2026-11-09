@@ -23,8 +23,8 @@ The project selects what to use, and this file does not select it.
 
 ## Procedure
 
-1. Package and release in CI with the packaging tool of the stack:\
-   the makers and publishers of Electron Forge, the bundler of Tauri, or the tool that the project selected for egui.\
+1. Package and release in CI with the packaging tool of the stack.\
+   Use the makers and publishers of Electron Forge, the bundler of Tauri, or the egui tool of the project.\
    Do not release from a developer computer.
 2. Build each target operating system on a CI runner of that system.
 3. Take the version from the release tag ([git.md](git.md)).
@@ -36,14 +36,20 @@ The project selects what to use, and this file does not select it.
 
 These rules apply when the distribution goes past the developers.
 
-1. On macOS, sign with a Developer ID Application certificate and the hardened runtime.\
+1. For macOS outside the Mac App Store, sign with a Developer ID Application certificate and the hardened runtime.\
    Then notarize the app, and staple the ticket to it.
-2. On Windows, sign each executable and installer with Authenticode and a timestamp.\
-   The private key of a code signing certificate must stay on hardware or in a cloud signing service.
-3. When the project has its own Linux package repository, sign the repository with GPG.
-4. Keep certificates, keys, and notarization credentials in the CI secret store, a hardware key, or a cloud signing service.\
+2. For the Mac App Store, sign the app with an Apple Distribution certificate, and turn on the App Sandbox.\
+   Sign the installer package with a Mac Installer Distribution certificate.\
+   Send the build through App Store Connect.\
+   App Review takes the place of notarization.
+3. For a direct download on Windows, sign each executable and installer with Authenticode and a timestamp.\
+   Also sign an MSI or EXE installer that goes to the Microsoft Store.\
+   The Microsoft Store signs an MSIX package itself.
+4. The private key of a code signing certificate MUST stay on hardware or in a cloud signing service.
+5. When the project has its own Linux package repository, sign the repository with GPG.
+6. Keep certificates, keys, and notarization credentials in the CI secret store, a hardware key, or a cloud signing service.\
    Do not put them in the repository.
-5. For notarization in CI, use an App Store Connect API key, not an Apple ID password.
+7. For notarization in CI, use an App Store Connect API key, not an Apple ID password.
 
 ## Updates
 
@@ -52,4 +58,5 @@ These rules apply when the project has an update channel.
 1. Download each update over HTTPS, and verify its signature before the install.
 2. Keep the update signing key, for example the updater key of Tauri, in the CI secret store, with a backup.\
    When the key is lost, installed copies cannot get updates.
-3. On macOS, an app must be signed to update itself.
+3. With Electron on macOS, the app MUST be signed to update itself, because Squirrel.Mac requires it.\
+   The Tauri updater verifies its own signature, which is separate from the code signature.
