@@ -50,21 +50,21 @@ The project selects a base design system, for example Material 3, Fluent 2, or I
 | File | Rules for |
 | --- | --- |
 | `design-brief.md` | The decisions of each service, their defaults, the verification matrix, and the template of `docs/conventions/design.md` |
-| `principles.md` | Less, but better, usability heuristics, interaction and Gestalt principles, and laws of UX |
+| `principles.md` | Less, but better, usability heuristics for reviews, and principles for cases that rules do not cover |
 | `design-systems.md` | The selection and the use of a base design system, and custom design systems |
-| `tokens.md` | Token tiers, names, scales for space, density, radius, and motion, themes, and the source of the tokens |
-| `color.md` | Color roles, contrast, color scales, wide-gamut colors, and dark and high-contrast themes |
-| `typography.md` | Fonts, variable fonts, type scales, text size settings, and readability |
-| `layout.md` | Window size classes, container queries, grids and space, safe areas, and right-to-left layouts |
-| `input.md` | Pointer, touch, keyboard, pen, and assistive input, by input capability |
+| `tokens.md` | Token tiers, names, scales, themes, and the source of the tokens |
+| `color.md` | Color roles, contrast checks, color scales, and dark and high-contrast themes |
+| `typography.md` | Fonts, type scales, text size settings, and readability |
+| `layout.md` | Window size classes, space, system areas, and right-to-left layouts |
+| `input.md` | Hover, context menus, shortcuts, touch targets, and gestures, by input capability |
 | `components.md` | Component specs, states, actions, feedback, screen states, and forms |
-| `accessibility.md` | WCAG 2.2 level AA checks, the standards that laws name, screen readers, and accessibility tests |
-| `motion.md` | Springs, durations and easing, transitions, choreography, performance, and reduced motion |
+| `accessibility.md` | The criteria that WCAG 2.2 added, the standards that laws name, and accessibility tests |
+| `motion.md` | Springs, durations, transitions, and reduced motion |
 | `materials.md` | Translucent materials such as Liquid Glass, Mica, and Acrylic, reduced transparency, and elevation |
-| `icons.md` | Icon sets, images, illustrations, and app icons |
+| `icons.md` | Icon sets, images, and app icons |
 | `content.md` | UI text, labels, messages, and localization |
-| `platforms.md` | Web and supported browsers, iOS, iPadOS, Android, macOS, Windows, GNOME, and apps on more than one platform |
-| `glossary.md` | The names of transitions, layouts, feedback, and surfaces, their names on each platform, and names with more than one meaning |
+| `platforms.md` | Platform rules that agents often miss, and the differences between platforms |
+| `glossary.md` | The names of patterns on each platform, and names with more than one meaning |
 
 The reference files are in [`plugins/vulpes-conventions/skills/design-conventions/references`](plugins/vulpes-conventions/skills/design-conventions/references).
 
