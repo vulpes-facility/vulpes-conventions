@@ -1,6 +1,6 @@
 ---
 name: design-conventions
-description: Design conventions for the user interface of web, mobile, and desktop apps. They cover a design brief for each service, design principles such as "less, but better" and usability heuristics, the selection of a base design system (Material 3, Apple HIG, Fluent 2, GNOME HIG, IBM Carbon, Spectrum, Primer, Ant Design, Atlassian, Polaris, Salesforce Lightning, KRDS, GOV.UK, USWDS), tokens, color, typography, layout, input methods, components, motion, materials such as Liquid Glass, UI text, accessibility (WCAG 2.2), and a glossary of pattern names such as hero animations. Use it when you design or review a screen, a flow, or a component, or make a wireframe, a mockup, or a prototype. Use it when you start the design of a service, select a design system, add a token or a theme, or write UI text. Use it when you adapt a UI to a platform, a browser, a window size, an input method, a language, or a user setting.
+description: Design conventions for the user interface of web, mobile, and desktop apps. They start with a design brief for each service and with design principles, such as "less, but better" and usability heuristics. They help select a base design system. Examples are Material 3, Apple HIG, Fluent 2, GNOME HIG, IBM Carbon, Spectrum, Primer, Ant Design, Atlassian, Polaris, Salesforce Lightning, KRDS, GOV.UK, and USWDS. They cover tokens, color, typography, layout, input methods, components, motion, materials, UI text, and accessibility (WCAG 2.2). A glossary gives the names of patterns, such as hero animations. Use it when you design or review a screen, a flow, or a component, or make a wireframe, a mockup, or a prototype. Use it when you start the design of a service, select a design system, add a token or a theme, or write UI text. Use it when you adapt a UI to a platform, a browser, a window size, an input method, a language, or a user setting.
 ---
 
 # Design conventions
@@ -48,7 +48,7 @@ MUST, MUST NOT, SHOULD, SHOULD NOT, and MAY are BCP 14 keywords (RFC 2119, RFC 8
    Before you add a component, a token, or a pattern, look for one that does the same work.\
    When none does, add it to the design system, not to one screen only.
 2. Do not use raw values in screens and components.\
-   Use a semantic token for each color, size, space, radius, shadow, font, and duration ([`references/tokens.md`](references/tokens.md)).
+   Use a semantic or a component token for each color, size, space, radius, shadow, font, and duration ([`references/tokens.md`](references/tokens.md)).
 3. On each platform, use the controls and the patterns of the platform for navigation, back, system dialogs, menus, keyboard shortcuts, and gestures.\
    Show the brand with tokens, icons, and images, not with changed controls.
 4. Meet WCAG 2.2 level AA on each platform, also in native apps ([`references/accessibility.md`](references/accessibility.md)).

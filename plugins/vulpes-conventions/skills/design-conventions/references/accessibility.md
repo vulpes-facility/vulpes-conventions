@@ -8,7 +8,7 @@ For a native app, apply WCAG 2.2 with WCAG2ICT, and the accessibility guide of t
 | Area | Requirement | WCAG |
 | --- | --- | --- |
 | Text alternatives | Each image with information has a text alternative | 1.1.1 |
-| Media | Videos have captions, and audio has a transcript | 1.2.2, 1.2.3, 1.2.5 |
+| Media | Prerecorded audio has a transcript, and videos have captions and an audio description | 1.2.1, 1.2.2, 1.2.3, 1.2.5 |
 | Structure | Headings, lists, tables, and landmarks are in the code, not only in the look | 1.3.1 |
 | Orientation | The UI works in both orientations | 1.3.4 |
 | Color | Color is not the only way to show information | 1.4.1 |

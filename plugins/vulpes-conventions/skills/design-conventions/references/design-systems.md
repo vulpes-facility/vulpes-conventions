@@ -63,7 +63,7 @@ Apply the rules of this file to it.
 1. Make a custom design system only when no design system in the table fits the product, or when the user asks for one.
 2. Start with the tokens ([`tokens.md`](tokens.md)), then the type scale, then the components.
 3. Use the platform guidelines for the behavior of each component.
-4. Build the components on a component library with accessible behavior, and give them the tokens of the design system.
+4. Write the accessible behavior of each component in its spec ([`components.md`](components.md)).
 
 ## Native platforms
 

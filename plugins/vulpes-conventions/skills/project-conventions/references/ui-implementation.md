@@ -6,6 +6,8 @@ The design rules stay in that skill.
 ## Component libraries
 
 1. When the base design system has an official component library for the stack, use it ([`client-apps.md`](client-apps.md)).
+2. For a custom design system, build the components on a component library with accessible behavior, and give them the tokens of the design system.\
+   On React, use shadcn (`SKILL.md`, section 4).
 
 | Design system | Official components |
 | --- | --- |
