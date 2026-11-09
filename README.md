@@ -30,6 +30,7 @@ Claude reads a reference file only when the task needs it.
 | `client-apps.md` | Web, Flutter, Android, iOS, Electron, Tauri, and egui apps |
 | `ui-implementation.md` | How to build the design of `design-conventions` in code: component libraries, tokens, conditions, browsers, semantics, motion, and localization |
 | `mobile-release.md` | Fastlane lanes and signing |
+| `testing.md` | Which tests not to write, regression tests for bug fixes, test doubles, and failing tests |
 | `desktop-release.md` | The release decisions of the project, CI packaging, signing, and updates of desktop apps |
 | `observability.md` | OpenTelemetry, logs, and alerts |
 | `containers.md` | Dockerfiles and compose files |
