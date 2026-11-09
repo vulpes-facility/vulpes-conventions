@@ -22,7 +22,7 @@
 
 ## Contrast and settings
 
-1. Text and icons on a translucent material MUST keep the contrast of [`color.md`](color.md) on each content that can be under them.
+1. Text and icons on a translucent material MUST keep the WCAG contrast (1.4.3, 1.4.11) on each content that can be under them.
 2. Follow the reduced transparency setting of each platform, also in web apps where the browser gives it.\
    Examples are Reduce Transparency on Apple platforms and Transparency effects on Windows.\
    With this setting, use opaque surfaces.

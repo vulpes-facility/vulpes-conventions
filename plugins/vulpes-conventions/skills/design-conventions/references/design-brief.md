@@ -26,7 +26,7 @@ The answers go in `docs/conventions/design.md` of the project.
 | Base design system and its version | Ask | A recommendation only | [`design-systems.md`](design-systems.md) |
 | Brand: colors, fonts, logo, and illustration style | Ask | The values of the base design system | [`tokens.md`](tokens.md), [`color.md`](color.md), [`typography.md`](typography.md), [`icons.md`](icons.md) |
 | Languages, and right-to-left scripts | Ask | The language of the user only | [`content.md`](content.md) |
-| Supported browsers | Default | The browsers that the project supports for its code | [`platforms.md`](platforms.md) |
+| Supported browsers | Default | The browsers that the project supports for its code | `SKILL.md`, section 2 |
 | Window sizes | Default | All window size classes, from compact | [`layout.md`](layout.md) |
 | Input methods | Default | A pointer, touch, and a keyboard | [`input.md`](input.md) |
 | Density | Default | The density of the base design system | [`tokens.md`](tokens.md) |

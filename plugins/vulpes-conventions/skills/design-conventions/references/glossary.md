@@ -49,6 +49,15 @@ This file gives the names of design patterns, and their other names on each plat
 | Progress bar | Linear progress indicator, progress view |
 | Tonal elevation | Surface containers (Material 3) |
 
+## Foundations
+
+| Name | Other names |
+| --- | --- |
+| Type scale | Type ramp (Windows), text styles (Apple) |
+| Window size class | Breakpoint, size class (Apple) |
+| Safe area | Insets (Android) |
+| Dynamic color | Material You (Android) |
+
 ## Names with more than one meaning
 
 | Name | Meanings |
