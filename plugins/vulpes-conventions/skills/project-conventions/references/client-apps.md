@@ -26,8 +26,14 @@
 
 - Keep code in the slice or feature that uses it.\
   When a second one uses it, move it down a layer.
+- When you add a client app, ask the user to select its base design system and its component library before you make screens.\
+  Recommend a selection, and tell the reason.\
+  Write the selection in `docs/conventions/`.
 - Make screens with one component library and design tokens, not raw colors.\
-  On the web, use Tailwind CSS.\
+  When the base design system of the project has an official component library for the stack, use that library.\
+  Use the `design-conventions` skill for the design system, the tokens, and the look and behavior of each screen.\
+  Build them by [`ui-implementation.md`](ui-implementation.md).
+- On the web, use Tailwind CSS for the styles that the component library does not give.\
   Do not write stylesheets by hand.
 - When the React Compiler compiles a component, do not add `useMemo`, `useCallback`, or `memo` to it for speed.
 - Use effects and watchers only to synchronize with systems outside the framework: timers, global keys, device APIs, and DOM APIs.

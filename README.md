@@ -1,7 +1,8 @@
 # vulpes-conventions
 
-A Claude Code plugin with general architecture and code conventions for software projects in any stack.\
-Its skill, `project-conventions`, tells Claude how to set up a repository and how to add a service, an API, a migration, a screen, or a deployment.
+A Claude Code plugin with general architecture, code, and design conventions for software projects in any stack.\
+Its skill `project-conventions` tells Claude how to set up a repository and how to add a service, an API, a migration, a screen, or a deployment.\
+Its skill `design-conventions` tells Claude how to design the user interface of web, mobile, and desktop apps.
 
 ## Install
 
@@ -12,8 +13,10 @@ claude plugin install vulpes-conventions@vulpes
 
 ## Contents
 
-`SKILL.md` keeps the rules for every task, the stack and component tool tables, and a table that tells which reference file to read for each task.\
+Each `SKILL.md` keeps the rules for every task, the tool or platform tables, and a table that tells which reference file to read for each task.\
 Claude reads a reference file only when the task needs it.
+
+### project-conventions
 
 | File | Rules for |
 | --- | --- |
@@ -25,6 +28,7 @@ Claude reads a reference file only when the task needs it.
 | `data-stores.md` | PostgreSQL, MongoDB, Redis or Valkey, and object storage |
 | `messaging.md` | RabbitMQ, Kafka, and the transactional outbox |
 | `client-apps.md` | Web, Flutter, Android, and iOS apps |
+| `ui-implementation.md` | How to build the design of `design-conventions` in code: component libraries, tokens, conditions, browsers, semantics, motion, and localization |
 | `mobile-release.md` | Fastlane lanes and signing |
 | `observability.md` | OpenTelemetry, logs, and alerts |
 | `containers.md` | Dockerfiles and compose files |
@@ -34,6 +38,33 @@ Claude reads a reference file only when the task needs it.
 | `git.md` | Branch strategies, Conventional Commits, signed commits, and release-please |
 
 The reference files are in [`plugins/vulpes-conventions/skills/project-conventions/references`](plugins/vulpes-conventions/skills/project-conventions/references).
+
+### design-conventions
+
+The skill has design rules only, and no code rules.\
+It does not select a design tool, a token file format, or a technology.\
+The project selects a base design system, for example Material 3, Fluent 2, or IBM Carbon, and the skill applies its rules with that design system.
+
+| File | Rules for |
+| --- | --- |
+| `design-brief.md` | The decisions of each service, their defaults, the verification matrix, and the template of `docs/conventions/design.md` |
+| `principles.md` | Less, but better, usability heuristics, interaction and Gestalt principles, and laws of UX |
+| `design-systems.md` | The selection and the use of a base design system, and custom design systems |
+| `tokens.md` | Token tiers, names, scales for space, density, radius, and motion, themes, and the source of the tokens |
+| `color.md` | Color roles, contrast, color scales, wide-gamut colors, and dark and high-contrast themes |
+| `typography.md` | Fonts, variable fonts, type scales, text size settings, and readability |
+| `layout.md` | Window size classes, container queries, grids and space, safe areas, and right-to-left layouts |
+| `input.md` | Pointer, touch, keyboard, pen, and assistive input, by input capability |
+| `components.md` | Component specs, states, actions, feedback, screen states, and forms |
+| `accessibility.md` | WCAG 2.2 level AA checks, the standards that laws name, screen readers, and accessibility tests |
+| `motion.md` | Springs, durations and easing, transitions, choreography, performance, and reduced motion |
+| `materials.md` | Translucent materials such as Liquid Glass, Mica, and Acrylic, reduced transparency, and elevation |
+| `icons.md` | Icon sets, images, illustrations, and app icons |
+| `content.md` | UI text, labels, messages, and localization |
+| `platforms.md` | Web and supported browsers, iOS, iPadOS, Android, macOS, Windows, GNOME, and apps on more than one platform |
+| `glossary.md` | The names of transitions, layouts, feedback, and surfaces, their names on each platform, and names with more than one meaning |
+
+The reference files are in [`plugins/vulpes-conventions/skills/design-conventions/references`](plugins/vulpes-conventions/skills/design-conventions/references).
 
 ## Development
 
