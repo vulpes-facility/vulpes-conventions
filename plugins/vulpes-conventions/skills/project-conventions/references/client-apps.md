@@ -55,4 +55,4 @@ An egui app builds the UI in Rust, and follows the rules above.
 3. Parse each message between the processes, as a value that comes into the app (rule 1).
 4. In egui, keep AccessKit on, and give each widget a label.\
    The screen reader support of egui is not complete, for example with Orca on Linux.\
-   Test each screen with the screen reader of each target platform.
+   Do the screen reader tests of the `design-conventions` skill on each target platform ([`accessibility.md`](../../design-conventions/references/accessibility.md)).
